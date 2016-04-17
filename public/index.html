@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title></title>
+  <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/styles/main.css" type="text/css">
+</head>
+<body ng-app="todoListApp">
+  <!-- ng-include src attribute expects an expression, hence we need to provide the path as a string (notice single quotes within double quotes) -->
+  <ng-include src="'templates/navbar.html'"></ng-include>
+  <h1>My TODOs!</h1>
+  
+  <div class="list" ng-controller="mainCtrl">
+    <div class="add">
+      <a href="#" ng-click="addTodo()">
+        + Add a New Task</a>
+      </div>
+    <todo></todo>
+   </div>
+
+  <script src="/scripts/vendor.bundle.js"></script>
+  <script src="/scripts/todo.bundle.js"></script>
+
+  <!--<script src="/vendor/angular.js"></script>
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/controllers/main.js"></script>
+  <script src="/scripts/controllers/todo.js"></script>
+  <script src="/scripts/services/data.js"></script>
+  <script src="/scripts/directives/todo.js"></script>-->
+</body>
+</html>
