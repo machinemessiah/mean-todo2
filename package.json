@@ -1,0 +1,19 @@
+{
+  "name": "mean-todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^1.12.14"
+  },
+  "dependencies": {
+    "angular": "^1.5.3",
+    "body-parser": "1.15.0",
+    "mongoose": "4.4.11"
+  }
+}
