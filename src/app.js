@@ -5,6 +5,7 @@
 // which are attached to the router instead of attaching them all to app and prefixing manually each time)
 var express = require('express'),
 	app = express(),
+	path = require('path'),
 	port = 3000;
 
 // add datatbase file
@@ -15,7 +16,7 @@ require('./database');
 // tell express to serve static files from the public dir
 // expree.static is the built in "middleware" that is designed to serve static files
 // the first param is the starting path (so we could do /angular, and all of the public files would be served from localhost/angular)
-app.use('/',express.static('public'));
+app.use('/',express.static(path.join(__dirname, '../public')));
 
 // this tells express to use body-parser's json parser (installed with npm) to parse request bodies
 // (by default express does not parse request body data)
@@ -30,8 +31,7 @@ app.use(parser.json());
 var router = require('./api');
 app.use('/api', router);
 
-// start the express server instance listening on set port 
+// start the express server instance listening on set port
 app.listen(port, function(){
 	console.log("server running");
 });
-
